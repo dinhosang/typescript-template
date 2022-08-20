@@ -1,0 +1,17 @@
+# node
+
+node_modules
+
+# editor
+
+.vscode
+.idea
+
+# test
+
+coverage
+jest.config.js
+
+# build
+
+dist

@@ -1,0 +1,42 @@
+env:
+  es2020: true
+  jest: true
+  node: true
+extends:
+  - eslint:recommended
+  - plugin:jest/recommended
+  - plugin:jest/style
+  - plugin:jest-formatting/recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier
+parser: '@typescript-eslint/parser'
+parserOptions:
+  excmaVersion: 2020
+  sourceType: module
+plugins:
+  - jest
+  - jest-formatting
+  - '@typescript-eslint'
+  - prettier
+rules:
+  'prettier/prettier':
+    - error
+    - singleQuote: true
+  max-len:
+    - error
+    - code: 100
+      ignoreUrls: true
+      ignoreRegExpLiterals: true
+  '@typescript-eslint/no-unused-vars':
+    - error
+  'import/prefer-default-export':
+    - off
+  'no-tabs':
+    - error
+  quotes:
+    - error
+    - single
+    - avoidEscape: true
+      allowTemplateLiterals: false
+  '@typescript-eslint/no-explicit-any':
+    - off
